@@ -34,3 +34,45 @@ body{
     margin-bottom: 0;
     text-align: center;
   }
+
+
+.wins-losses{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: "Varela Round", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1;
+
+}
+
+.wins {
+    display: flex;
+    align-items: center;
+}
+
+.losses{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.wins .number,
+.losses .number {
+  font-size: 52px;
+  margin-right: 5px;
+}
+
+.wins {
+  margin-right: 30px;
+}
+
+.wins .number {
+  color: #5dc674;
+}
+
+.losses .number {
+  color: #da516f;
+}
