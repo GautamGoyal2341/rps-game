@@ -13,6 +13,25 @@ function App()
 
                 <h2>Rock . Paper . Scissors</h2>
 
+
+
+                <div className="win-losses">
+                    <div className="wins">
+                        <span className="number">0</span>
+                        <span className="text">Wins</span>
+
+                    </div>
+
+
+                    <div className="losses">
+                        <span className="number">0</span>
+                        <span className="text">Losses</span>
+                    </div>
+
+
+
+                </div>
+
             </div>
         </div>
     )
