@@ -9,7 +9,11 @@ function App()
 {
     return (
         <div className="app">
-            
+            <div className="info">
+
+                <h2>Rock . Paper . Scissors</h2>
+
+            </div>
         </div>
     )
 }
