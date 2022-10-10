@@ -23,33 +23,25 @@ function App() {
           </div>
         </div>
 
-         <div  className="choices">
-            
-             <div>You</div>
-             <div>Computer</div>
+        <div className="choices">
+          <div>You</div>
 
-             
-         <div>
-             <button className="rock">
-                <Rock/>
-             </button>
+          <div />
+          <div>Computer</div>
 
-             <button className="paper">
-                <Paper/>
-             </button>
-             <button className="scissors">
-                <Scissors/>
-                
-             </button>
+          <div>
+            <button className="rock">
+              <Rock />
+            </button>
 
-         </div>
-
-
-         </div>
-
-
-
-
+            <button className="paper">
+              <Paper />
+            </button>
+            <button className="scissors">
+              <Scissors />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

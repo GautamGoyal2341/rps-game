@@ -76,3 +76,76 @@ body{
 .losses .number {
   color: #da516f;
 }
+
+
+.choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 20px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 18px;
+    color: #5f99f0;
+  }
+
+  .choices > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .choices button {
+    cursor: pointer;
+    font-size: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    transition: 0.1s ease all;
+  }
+
+  .choices button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .choices .rock {
+    background: #f7941a;
+  }
+  
+  .choices .rock path {
+    fill: #815116;
+  }
+  
+  .choices .paper {
+    background: #8dc351;
+  }
+  
+  .choices .paper path {
+    fill: #3f5e1b;
+  }
+  
+  .choices .scissors {
+    background: #7c79ea;
+  }
+  
+  .choices .scissors path {
+    fill: #2f2c8f;
+  }
+  
+  .choices .computer-choice {
+    background: #333;
+    color: #bbb;
+  }
+  
+  .choices .computer-choice path {
+    fill: #bbb;
+  }
+  
