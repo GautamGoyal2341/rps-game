@@ -93,6 +93,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #121315;
+    font-style:oblique
   }
   
 
@@ -101,7 +103,7 @@ body{
     font-size: 50px;
     margin-bottom: 20px;
     padding: 20px;
-    background: #fff;
+    background: rgb(29, 28, 28);
     outline: none;
     border: none;
     border-radius: 50%;
@@ -141,7 +143,7 @@ body{
   }
   
   .choices .computer-choice {
-    background: #333;
+    background: rgb(39, 38, 38);
     color: #bbb;
   }
   
