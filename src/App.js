@@ -4,6 +4,17 @@ import Paper from "./icons/Paper";
 import Scissors from "./icons/Scissors";
 import "./App.css";
 
+const choices = [
+
+    {id :1 , name : 'rock' , components : Rock},
+    {id : 2 , name : 'paper' , components : Paper},
+    {id : 3 , name : 'scissor' , components : Scissors}
+
+]
+
+
+
+
 function App() {
   return (
     <div className='app'>

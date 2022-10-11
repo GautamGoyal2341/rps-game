@@ -151,3 +151,12 @@ body{
     fill: #bbb;
   }
   
+
+  .vs {
+    width: 100px;
+    font-size: 70px;
+    opacity: 0.25;
+    transform: rotate(-0.1turn);
+    pointer-events: none;
+    
+  }
