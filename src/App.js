@@ -16,6 +16,27 @@ const choices = [
 
 
 function App() {
+
+
+
+    function handelUserChoice(choice)
+    {
+
+        const chosenChoice = choices.find((c) => 
+
+            c.id  === choice
+
+        )
+
+    }
+
+
+  
+
+
+
+
+
   return (
     <div className='app'>
       <div className='info'>
@@ -43,13 +64,13 @@ function App() {
 
      
         <div>
-          <button className='rock'>
+          <button className='rock'  onClick={handelUserChoice(1)}>
             <Rock />
           </button>
-          <button className='paper'>
+          <button className='paper'onClick={handelUserChoice(2)}>
             <Paper />
           </button>
-          <button className='scissors'>
+          <button className='scissors'onClick={handelUserChoice(3)}>
             <Scissors />
           </button>
         </div>
