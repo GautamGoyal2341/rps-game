@@ -18,6 +18,11 @@ function App() {
       setUserChoice(chosenChoice);
   }
 
+  React.useEffect(() => {
+    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+    setComputerChoice(randomChoice);
+  } , []);
+
   return (
     <div className="app">
       <div className="info">
