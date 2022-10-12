@@ -11,6 +11,8 @@ const choices = [
 ];
 
 function App() {
+    const [wins , setWins] = React.useState(0);
+    const [looses , setLooses] = React.useState(0);
     const [userChoice , setUserChoice] = React.useState(null);
     const [computerChoice , setComputerChoice] = React.useState(null);
   function handelUserChoice(choice) {
@@ -30,12 +32,12 @@ function App() {
 
         <div className="wins-losses">
           <div className="wins">
-            <span className="number">0</span>
+            <span className="number">{wins}</span>
             <span className="text">Wins</span>
           </div>
 
           <div className="losses">
-            <span className="number">0</span>
+            <span className="number">{looses}</span>
             <span className="text">Losses</span>
           </div>
         </div>
