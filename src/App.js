@@ -21,7 +21,7 @@ function App() {
       setUserChoice(chosenChoice);
 
 
-
+      setGameState('win');
 
 
 
@@ -50,6 +50,10 @@ function App() {
           </div>
         </div>
       </div>
+
+
+
+        <div className="game-state"></div>
 
       <div className="choices">
         <div>You</div>
