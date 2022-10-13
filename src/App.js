@@ -15,9 +15,17 @@ function App() {
     const [looses , setLooses] = React.useState(0);
     const [userChoice , setUserChoice] = React.useState(null);
     const [computerChoice , setComputerChoice] = React.useState(null);
+    const [gameState , setGameState] = React.useState(null);
   function handelUserChoice(choice) {
     const chosenChoice = choices.find((c) => c.id === choice);
       setUserChoice(chosenChoice);
+
+
+
+
+
+
+
   }
 
   React.useEffect(() => {
@@ -33,12 +41,12 @@ function App() {
         <div className="wins-losses">
           <div className="wins">
             <span className="number">{wins}</span>
-            <span className="text">Wins</span>
+            <span className="text">{ wins===1 ? "Win" : "Wins"  }</span>
           </div>
 
           <div className="losses">
             <span className="number">{looses}</span>
-            <span className="text">Losses</span>
+            <span className="text">{ looses===1 ? "Loose" : "Looses"  }</span>
           </div>
         </div>
       </div>
