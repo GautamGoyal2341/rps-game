@@ -30,6 +30,11 @@ function App() {
     setUserChoice(chosenChoice);
 
     setGameState("win");
+    if(chosenChoice.name === 'rock' && computerChoice.name === 'paper')
+    {
+        setGameState('lose');
+        setLooses( losses => losses + 1)
+    }
   }
 
   React.useEffect(() => {
@@ -59,9 +64,9 @@ function App() {
         <div className={`game-state ${gameState}`}>
           <div className="game-state-content">
 
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>{renderComponent(userChoice)}</p>
+            <p>hurhfushf</p>
+            <p>{renderComponent(computerChoice)}</p>
 
 
 
