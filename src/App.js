@@ -53,7 +53,16 @@ function App() {
 
 
 
-        <div className="game-state"></div>
+  { gameState &&       <div className = {`game-state ${gameState}`} >
+
+                    <div className="game-state-content">
+
+
+
+                    </div>
+ 
+        </div>
+}
 
       <div className="choices">
         <div>You</div>
