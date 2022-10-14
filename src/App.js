@@ -5,9 +5,9 @@ import Scissors from "./icons/Scissors";
 import "./App.css";
 
 const choices = [
-  { id: 1, name: "rock", component: Rock },
-  { id: 2, name: "paper", component: Paper },
-  { id: 3, name: "scissor", component: Scissors },
+  { id: 1, name: "rock", component: Rock ,lossesTo : 2 },
+  { id: 2, name: "paper", component: Paper , lossesTo : 3 },
+  { id: 3, name: "scissor", component: Scissors  , lossesTo : 1},
 ];
 
    
@@ -30,11 +30,18 @@ function App() {
     setUserChoice(chosenChoice);
 
     setGameState("win");
-    if(chosenChoice.name === 'rock' && computerChoice.name === 'paper')
-    {
+     if(chosenChoice.lossesTo === computerChoice.id)
+     {
+        setLooses(looses => looses+1);
         setGameState('lose');
-        setLooses( losses => losses + 1)
-    }
+
+     }else if(computerChoice.loosesTo === chosenChoice.id)
+     {
+        setGameState('win');
+     }else if(chosenChoice.id === computerChoice.id)
+     {
+        setGameState('draw');
+     }
   }
 
   React.useEffect(() => {
