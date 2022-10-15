@@ -29,7 +29,7 @@ function App() {
     const chosenChoice = choices.find((c) => c.id === choice);
     setUserChoice(chosenChoice);
 
-    setGameState("win");
+    // setGameState("win");
      if(chosenChoice.lossesTo === computerChoice.id)
      {
         setLooses(looses => looses+1);
@@ -37,6 +37,7 @@ function App() {
 
      }else if(computerChoice.loosesTo === chosenChoice.id)
      {
+        setWins(wins => wins+1)
         setGameState('win');
      }else if(chosenChoice.id === computerChoice.id)
      {
@@ -72,7 +73,14 @@ function App() {
           <div className="game-state-content">
 
             <p>{renderComponent(userChoice)}</p>
-            <p>hurhfushf</p>
+            {/* <p>{gameState}</p> */}
+
+            {gameState === "win" && <p>Congrats! You won!</p>}
+              {gameState === "lose" && <p>Sorry! You lost!</p>}
+              {gameState === "draw" && <p>You drew!</p>}
+
+
+
             <p>{renderComponent(computerChoice)}</p>
 
 
