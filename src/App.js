@@ -5,20 +5,16 @@ import Scissors from "./icons/Scissors";
 import "./App.css";
 
 const choices = [
-  { id: 1, name: "rock", component: Rock ,lossesTo : 2 },
-  { id: 2, name: "paper", component: Paper , lossesTo : 3 },
-  { id: 3, name: "scissor", component: Scissors  , lossesTo : 1},
+  { id: 1, name: "rock", component: Rock, lossesTo: 2 },
+  { id: 2, name: "paper", component: Paper, lossesTo: 3 },
+  { id: 3, name: "scissor", component: Scissors, lossesTo: 1 },
 ];
 
-   
-  function renderComponent(choice)
-  {
-    const Component = choice.component;
-    return <Component/>
-  }
+function renderComponent(choice) {
+  const Component = choice.component;
+  return <Component />;
+}
 
-
-   
 function App() {
   const [wins, setWins] = React.useState(0);
   const [looses, setLooses] = React.useState(0);
@@ -30,25 +26,29 @@ function App() {
     setUserChoice(chosenChoice);
 
     // setGameState("win");
-     if(chosenChoice.lossesTo === computerChoice.id)
-     {
-        setLooses(looses => looses+1);
-        setGameState('lose');
-
-     }else if(computerChoice.loosesTo === chosenChoice.id)
-     {
-        setWins(wins => wins+1)
-        setGameState('win');
-     }else if(chosenChoice.id === computerChoice.id)
-     {
-        setGameState('draw');
-     }
+    if (chosenChoice.lossesTo === computerChoice.id) {
+      setLooses((looses) => looses + 1);
+      setGameState("lose");
+    } else if (computerChoice.loosesTo === chosenChoice.id) {
+      setWins((wins) => wins + 1);
+      setGameState("win");
+    } else if (chosenChoice.id === computerChoice.id) {
+      setGameState("draw");
+    }
   }
 
   React.useEffect(() => {
     const randomChoice = choices[Math.floor(Math.random() * choices.length)];
     setComputerChoice(randomChoice);
   }, []);
+
+  function restart() {
+    setGameState(null);
+    setUserChoice(null);
+
+    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+    setComputerChoice(randomChoice);
+  }
 
   return (
     <div className="app">
@@ -70,21 +70,19 @@ function App() {
 
       {gameState && (
         <div className={`game-state ${gameState}`}>
-          <div className="game-state-content">
+          <div>
+            <div className="game-state-content">
+              <p>{renderComponent(userChoice)}</p>
+              {/* <p>{gameState}</p> */}
 
-            <p>{renderComponent(userChoice)}</p>
-            {/* <p>{gameState}</p> */}
-
-            {gameState === "win" && <p>Congrats! You won!</p>}
+              {gameState === "win" && <p>Congrats! You won!</p>}
               {gameState === "lose" && <p>Sorry! You lost!</p>}
               {gameState === "draw" && <p>You drew!</p>}
 
+              <p>{renderComponent(computerChoice)}</p>
+            </div>
 
-
-            <p>{renderComponent(computerChoice)}</p>
-
-
-
+            <button onClick={() => restart()}>Play Again!!</button>
           </div>
         </div>
       )}
