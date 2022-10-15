@@ -38,8 +38,7 @@ function App() {
   }
 
   React.useEffect(() => {
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-    setComputerChoice(randomChoice);
+    restart();
   }, []);
 
   function restart() {
